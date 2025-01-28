@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+export async function GET(_: NextRequest) {
     return NextResponse.json({
         message: "Hello!"
     });
@@ -20,8 +20,6 @@ export async function POST(req: NextRequest) {
         if (emojiIdxs.length === 3) break;
     }
 
-    const rnds = Math.random()
-    const text = (await req.json()).text;
     return NextResponse.json({
         emojis: allEmojis.filter((_: string, idx: number) => emojiIdxs.includes(idx))
     });

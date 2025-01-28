@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
-    const params = await req.json();
-    console.log(params);
+export async function GET(_: NextRequest) {
     return NextResponse.json({
         message: "Hello!"
     });

@@ -2,12 +2,11 @@
 
 import { useContext, useRef, useState } from "react";
 import { PostContext } from "./contexts/posts";
-import { HeartIcon, SmileIcon, ThumbsUp } from "lucide-react";
 
 export default function TheForm() {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [emojis, setEmojis] = useState<string[]>([]);
-    const {setToggle, texts, setTexts, cursor, setCursor} = useContext(PostContext);
+    const {setTexts, cursor, setCursor} = useContext(PostContext);
    return (
           <form className="w-full flex flex-col justify-center items-center gap-y-4" 
             >

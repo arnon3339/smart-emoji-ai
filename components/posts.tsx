@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { PostContext } from "./contexts/posts";
-import { FacebookShareButton, LineShareButton, RedditShareButton, TelegramShareButton, TwitterShareButton } from "react-share";
 import { SocialIcon } from "react-social-icons";
-import { CircleX } from "lucide-react";
 import Link from "next/link";
 
 export default function Posts() {
