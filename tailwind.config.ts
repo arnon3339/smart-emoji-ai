@@ -12,6 +12,16 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        slideMargin: {
+          '0%': { marginLeft: '-4rem' },
+          '50%': { marginLeft: '-2rem' },
+          '100%': { marginLeft: '0px' },
+        },
+      },
+      animation: {
+        slideMargin: 'slideMargin 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
