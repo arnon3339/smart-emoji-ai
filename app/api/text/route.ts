@@ -1,17 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(_: NextRequest) {
+export async function GET(_req: NextRequest) {
     return NextResponse.json({
         message: "Hello!"
     });
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(_req: NextRequest) {
     const allEmojis = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🦝", "🐻", "🐼", "🐨", "🐯",
          "🦁", "🐮", "🐷", "🐽", "🐸", "🐵", "🙈", "🙉", "🙊", "🐒", "🦍", "🦧", "🦮", "🐕",
           "🐩", "🐺", "🦊", "🦝", "🐈", "🐈‍⬛", "🐅", "🐆", "🦓", "🦌", "🦬", "🐂", "🐃", "🐄",
            "🐎", "🦄", "🐖", "🐗", "🐏"];
-    let emojiIdxs: number[] = [];
+    const emojiIdxs: number[] = [];
     while (true) {
         const rnd = Math.floor(Math.random()*allEmojis.length);
         if (!emojiIdxs.includes(rnd))
